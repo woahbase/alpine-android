@@ -54,7 +54,7 @@ RUN set -xe \
         "platforms;android-${SDK_TARGET}" \
         "build-tools;${SDK_API_VERSION}" \
         "platform-tools" \
-        "tools" 1>/dev/null \
+        "tools" 1>/dev/null
     # && sdkmanager --uninstall "emulator" \
 #
 # COPY root/ /
