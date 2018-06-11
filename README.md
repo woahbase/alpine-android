@@ -218,11 +218,11 @@ docker run --rm -it \
   -e PGID=1000 -e PUID=1000 \
   woahbase/alpine-android:x86_64 \
   -ec 'sdkmanager --version; \
-  sdkmanager --list | sed -e "/Available Packages/q" ; \
-  gradle -version; \
-  adb version; \
-  npm --version; \
-  cordova --version --no-telemetry'; \
+    sdkmanager --list | sed -e "/Available Packages/q" ; \
+    gradle -version; \
+    adb version; \
+    npm --version; \
+    cordova --version --no-telemetry';
 ```
 
 And finally, if you have push access,
