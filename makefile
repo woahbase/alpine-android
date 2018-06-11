@@ -104,7 +104,14 @@ test :
 	# test armhf in real device
 	if [ "$(ARCH)" != "armhf" ]; \
 	then \
-		docker run --rm -it $(NAMEFLAGS) $(RUNFLAGS) $(PORTFLAGS) $(MOUNTFLAGS) $(OTHERFLAGS) $(IMAGETAG) -ec 'sleep 5; sdkmanager --version; gradle -version; adb version; npm --version; cordova --version --no-telemetry'; \
+		docker run --rm -it $(NAMEFLAGS) $(RUNFLAGS) $(PORTFLAGS) $(MOUNTFLAGS) $(OTHERFLAGS) $(IMAGETAG) -ec \
+		'sleep 5; \
+		sdkmanager --version; \
+		sdkmanager --list | sed -e "/Available Packages/q" ; \
+		gradle -version; \
+		adb version; \
+		npm --version; \
+		cordova --version --no-telemetry'; \
 	fi;
 
 # -- }}}
