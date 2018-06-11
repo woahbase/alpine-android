@@ -27,12 +27,12 @@ RUN set -xe \
         ${GRADLE_HOME} \
     && curl -o /tmp/sdk-tools-linux-${SDK_TOOLS_VERSION}.zip \
         -jkSL https://dl.google.com/android/repository/sdk-tools-linux-${SDK_TOOLS_VERSION}.zip \
-    && unzip -d ${ANDROID_HOME} \
+    && unzip -q -d ${ANDROID_HOME} \
         /tmp/sdk-tools-linux-${SDK_TOOLS_VERSION}.zip \
     && chown -Rh alpine:alpine ${ANDROID_HOME} \
     && curl -o /tmp/gradle-${GRADLE_VERSION}-bin.zip \
         -jkSL https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip \
-    && unzip -d /opt \
+    && unzip -q -d /opt \
         /tmp/gradle-${GRADLE_VERSION}-bin.zip \
     && chown -Rh alpine:alpine ${GRADLE_HOME} \
     && npm install -g \
