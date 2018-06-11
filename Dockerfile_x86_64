@@ -48,14 +48,14 @@ RUN set -xe \
     && mkdir -p ~/.android ~/.gradle \
     && touch ~/.android/repositories.cfg \
     && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties \
-    && yes | sdkmanager --licenses \
+    && yes | sdkmanager --licenses 1>/dev/null \
     && sdkmanager --update \
-    && sdkmanager --uninstall "emulator" \
     && sdkmanager \
         "platforms;android-${SDK_TARGET}" \
         "build-tools;${SDK_API_VERSION}" \
         "platform-tools" \
         "tools"
+    # && sdkmanager --uninstall "emulator" \
 #
 # COPY root/ /
 #
