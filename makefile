@@ -19,7 +19,7 @@ CNTNAME   := $(SVCNAME) # name for container name : docker_name, hostname : name
 GRADLE_VERSION     := "4.10"
 NPM_VERSION        := "latest"
 SDK_TARGET         := "28"
-SDK_TOOLS_VERSION  := "latest"
+SDK_TOOLS_VERSION  := "4333796"
 SDK_API_VERSION    := "28.0.2"
 
 # -- }}}
