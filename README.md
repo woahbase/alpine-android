@@ -4,9 +4,10 @@
 #### Container for Alpine Linux + OpenJDK8 + Android + Cordova
 ---
 
-This [image][233] containerizes the [Android][136] build
-environment, along with [Gradle][137] and [OpenJDK8][135], as well as
-[Cordova][138] for building hybrid apps, with its [NPM][139] dependencies.
+This [image][233] containerizes the [Android][136] command-line
+tools, along with [Gradle][137] and [OpenJDK8][135] for building
+native apps, as well as [Cordova][138] for building hybrid
+projects, with its [NPM][139] dependencies.
 
 Based on [Alpine Linux][131] from my [alpine-openjdk8][132] image with
 the [s6][133] init system [overlayed][134] in it.

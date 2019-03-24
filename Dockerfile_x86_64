@@ -19,7 +19,7 @@ ENV \
 RUN set -xe \
     && apk add --no-cache --purge -uU \
         openjdk8 \
-        curl openssl git make libc-dev gcc libstdc++ \
+        curl nss openssl git make libc-dev gcc libstdc++ \
         nodejs nodejs-npm \
         unzip \
     && mkdir -p \
